@@ -53,10 +53,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          mkdir portfolio/themes
-          cd portfolio/themes
-          git clone https://github.com/gurusabarish/hugo-profile.git
-          cd ../
+          cd portfolio
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
